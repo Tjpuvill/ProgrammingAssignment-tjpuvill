@@ -1,4 +1,13 @@
 
+## makeCachematrix: makes a list of functions that will enable cachesolve 
+## set: a function that can set the matrix or return it to NULL
+## get: a function that can retrieve the reversed matrix from memory
+## setinverse: a function that can set the reversed matrix 
+## getinverse: a function that can retrieve the reversed matrix from memory
+## cacheSolve: either returning the reversed matrix from memory or calculating the new one
+
+
+
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL 
   set <- function(y) {
@@ -24,6 +33,8 @@ cacheSolve <- function(x, ...) {
   x$setinverse(inv)
   inv
 }
+
+##
 
 
 m <- matrix(c(-1, -2, 1, 1), 2,2)
